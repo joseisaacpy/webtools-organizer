@@ -1,0 +1,63 @@
+/* seção */
+#form-section {
+  /* inicia invisível */
+  display: none;
+
+  max-width: 500px;
+  padding: 1rem;
+  gap: 1rem;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+}
+
+/* formulário */
+#add-link-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/* inputs */
+#add-link-form input {
+  border-radius: inherit;
+  border: 1px solid #000000;
+  padding: 0.4rem;
+  outline: 0;
+  transition: var(--default-transition);
+}
+
+/* input com foco */
+#add-link-form input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* botão */
+#add-link-form button {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  transition: var(--default-transition);
+}
+/* botão com foco */
+#add-link-form button:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+/* botão com hover */
+#add-link-form button:hover,
+#add-link-form button:active {
+  transform: scale(0.95);
+}
