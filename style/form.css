@@ -1,12 +1,21 @@
-/* seção */
+/* seção modal com o formulário */
 #form-section {
-  /* inicia invisível */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
   display: none;
 
-  max-width: 500px;
+  max-width: 450px;
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+
+  margin: 0;
   padding: 1rem;
   gap: 1rem;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -16,6 +25,10 @@
   background-color: #fff;
 }
 
+#form-section h2 {
+  text-transform: capitalize;
+}
+
 /* formulário */
 #add-link-form {
   display: flex;
@@ -23,13 +36,14 @@
   gap: 1rem;
   width: 100%;
   padding: 1rem;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
   border-radius: 8px;
   margin: 0 auto;
 }
 
 /* inputs */
-#add-link-form input {
+#add-link-form input,
+select {
   border-radius: inherit;
   border: 1px solid #000000;
   padding: 0.4rem;
@@ -38,12 +52,14 @@
 }
 
 /* input com foco */
-#add-link-form input:focus {
+#add-link-form input:focus,
+select:focus {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 /* botão */
 #add-link-form button {
+  font-weight: 600;
   background: var(--color-primary);
   color: #fff;
   padding: 0.4rem 1rem;

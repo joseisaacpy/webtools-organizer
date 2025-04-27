@@ -32,16 +32,28 @@
 
       <section id="form-section">
         <!-- Formulário para adicionar categorias e links -->
-        <h2>Adicionar novo link</h2>
+        <h2 title="Digite qual categoria, o nome do link e a sua URL.">
+          Adicionar novo link
+        </h2>
         <form id="add-link-form">
-          <input type="text" id="category" placeholder="Categoria" required />
+          <!-- campo de selecionar categoria  -->
+          <select name="" id="category" required>
+            <option selected disabled>Categoria:</option>
+            <option value="HTML">HTML</option>
+            <option value="JS">JavaScript</option>
+            <option value="IMG">Imagens</option>
+            <option value="CSS">CSS</option>
+          </select>
+          <!-- input para pôr o nome do link -->
           <input
             type="text"
             id="link-name"
             placeholder="Nome do Link"
             required
           />
+          <!-- imput para pôr o link do site -->
           <input type="url" id="link-url" placeholder="URL do Link" required />
+          <!-- botão de adicionar -->
           <button type="submit">Adicionar</button>
         </form>
       </section>

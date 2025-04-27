@@ -12,3 +12,5 @@ btnAddLink.addEventListener("click", function () {
     sectionForm.style.display = "flex";
   }
 });
+
+// evento de clique fora do form, para esconder o form
