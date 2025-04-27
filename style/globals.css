@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+/* variáveis */
+:root {
+  --color-primary: #ff7e5f;
+  --color-secondary: #feb47b;
+  --color-background: #f0f0f0;
+  --color-text: #333;
+  --default-font: "Roboto", sans-serif;
+}
+
 /* html */
 html {
   font-size: 16px;
@@ -15,4 +24,5 @@ html {
 
 body {
   font-size: 1rem;
+  font-family: var(--default-font);
 }
