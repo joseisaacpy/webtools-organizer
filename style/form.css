@@ -3,10 +3,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.3);
+
   z-index: 9999;
 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 
   max-width: 450px;
   width: 100%;
@@ -16,6 +18,7 @@
   margin: 0;
   padding: 1rem;
   gap: 1rem;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -23,6 +26,13 @@
   border: 1px solid #000000;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+#form-section.active {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  opacity: 1;
 }
 
 #form-section h2 {

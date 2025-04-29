@@ -5,11 +5,11 @@ const btnAddLink = document.getElementById("btn-add-link");
 
 // botão recebe evento de clique, onde vai mostrar o form para adicionar links
 btnAddLink.addEventListener("click", function () {
-  // se o form estiver visivel, ele esconde, se não, ele mostra
-  if (sectionForm.style.display == "flex") {
-    sectionForm.style.display = "none";
+  // se o form tiver com classe visivel, ele esconde, se não, ele mostra
+  if (sectionForm.classList.contains("active")) {
+    sectionForm.classList.remove("active");
   } else {
-    sectionForm.style.display = "flex";
+    sectionForm.classList.add("active");
   }
 });
 
