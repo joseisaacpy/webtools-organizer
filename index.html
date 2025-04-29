@@ -16,17 +16,13 @@
     <main>
       <section id="categories-container">
         <!-- Categorias e links vão aparecer aqui -->
-        <div class="container-links" id="container-img">
-          <h2>Links de IMG's</h2>
+        <div class="container-links">
         </div>
-        <div class="container-links" id="container-css">
-          <h2>Links de CSS</h2>
+        <div class="container-links">
         </div>
-        <div class="container-links" id="container-html">
-          <h2>Links de HTML</h2>
+        <div class="container-links">
         </div>
-        <div class="container-links" id="container-js">
-          <h2>Links de JavaScript</h2>
+        <div class="container-links">
         </div>
       </section>
 
@@ -38,12 +34,21 @@
         <form id="add-link-form">
           <!-- campo de selecionar categoria  -->
           <select name="" id="category" required>
-            <option selected disabled>Categoria:</option>
+            <option selected disabled value="">Categoria:</option>
             <option value="HTML">HTML</option>
             <option value="JS">JavaScript</option>
             <option value="IMG">Imagens</option>
             <option value="CSS">CSS</option>
+            <option value="CUSTOM">Outra (digite abaixo)</option>
           </select>
+          <!-- input destinado ao option constomizado -->
+          <input
+            type="text"
+            id="custom-category"
+            placeholder="Nova categoria"
+            style="display: none"
+          />
+
           <!-- input para pôr o nome do link -->
           <input
             type="text"
