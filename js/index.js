@@ -1,7 +1,15 @@
 // section de adicionar links
 const sectionForm = document.getElementById("form-section");
+
 // botão de adicionar links novos
 const btnAddLink = document.getElementById("btn-add-link");
+
+// botão de fechar o form
+const btnCloseForm = document.getElementById("btn-fechar-form");
+// adiciona evento de fechar form
+btnCloseForm.addEventListener("click", () => {
+  sectionForm.classList.remove("active");
+});
 
 // botão recebe evento de clique, onde vai mostrar o form para adicionar links
 btnAddLink.addEventListener("click", function () {
@@ -73,6 +81,36 @@ form.addEventListener("submit", (event) => {
     }
     // se tiver valor, ele usa o valor digitado pelo usuario
     nomeCategoria = categoriaCustom;
+  }
+
+  // criação do container para os links
+  const container = document.createElement("section");
+  container.setAttribute("class", "container-links");
+
+  // verifica se o container já existe, se não existir, cria um novo
+  let categoriaExistente = document.getElementById(nomeCategoria);
+
+  // se a categoria não existir
+  if (!categoriaExistente) {
+    // cria o título do container
+    let tituloContainer = document.createElement("h2");
+    tituloContainer.textContent = nomeCategoria;
+
+    // cria uma novo container e define o id para o nome da categoria
+    categoriaExistente = document.createElement("section");
+    categoriaExistente.setAttribute("id", nomeCategoria);
+    categoriaExistente.setAttribute("class", "container-links");
+
+    // coloca o título da categoria dentro do container
+    categoriaExistente.appendChild(tituloContainer);
+    categoriaExistente.appendChild(link);
+
+    // adiciona o container na página
+    const areaContainers = document.querySelector("main #categories-container");
+    areaContainers.appendChild(categoriaExistente);
+  } else {
+    // se a categoria já existir, adicionar os novos links dentro do container existente
+    categoriaExistente.appendChild(link);
   }
 
   // reseta o form
