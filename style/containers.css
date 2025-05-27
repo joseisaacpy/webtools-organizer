@@ -14,6 +14,17 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .container-links h2 {
   text-align: center;
+}
+
+.container-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delete {
+  cursor: pointer;
 }
